@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
-        Scanner number = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         System.out.println("Введите число от 1 до 7");
-        int a = number.nextInt();
-        weekday(a);
+        int number = in.nextInt();
+        weekday(number);
     }
-    static void weekday(int a){
-        switch (a){
+    static void weekday(int number){
+        switch (number){
             case 1:
                 System.out.println("Понедельник");
                 break;

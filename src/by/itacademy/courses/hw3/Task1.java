@@ -7,10 +7,12 @@ public class Task1 {
         unpacking(b);
         packaging(a);
     }
+
     static void packaging(Integer b){
         int B = b;
         System.out.println(B);
     }
+
     static void unpacking(int a){
         Integer A = a;
         System.out.println(A);

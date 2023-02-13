@@ -1,21 +1,23 @@
 package by.itacademy.courses.hw3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task4 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите три целых числа: ");
+        System.out.println("Введите три целых числа");
         int a = in.nextInt();
         int b = in.nextInt();
         int c = in.nextInt();
-        Numbers1(a, b, c);
-        Numbers2(a, b, c);
-        Numbers3(a, b, c);
-
+        numbersMin(a, b, c);
+        numbers2(a, b, c);
+        numbersMax(a, b, c);
+        System.out.println();
+        test(a, b, c);
     }
 
-    static void Numbers1(int a, int b, int c) {
+    static void numbersMin(int a, int b, int c) {
         if (a < b & a < c) {
             System.out.println(a);
         } else if (c < b & c < a) {
@@ -25,7 +27,7 @@ public class Task4 {
         }
     }
 
-    static void Numbers2(int a, int b, int c) {
+    static void numbers2(int a, int b, int c) {
 
         if ( a < b &  a > c || a > b &  a < c) {
             System.out.println(a);
@@ -35,7 +37,8 @@ public class Task4 {
             System.out.println(c);
         }
     }
-    static void Numbers3(int a, int b, int c) {
+
+    static void numbersMax(int a, int b, int c) {
         if (a > b & a > c) {
             System.out.println(a);
         } else if (c > b & c > a) {
@@ -43,5 +46,15 @@ public class Task4 {
         } else if (b > c & b > a) {
             System.out.println(b);
         }
+    }
+    static void test(int a,int b,int c){
+        int[] number = new int[3];
+        number[0]=a;
+        number[1]=b;
+        number[2]=c;
+        Arrays.sort(number);
+        for (int result : number){
+            System.out.println(result);
+        }//так ещё будет проще
     }
 }
