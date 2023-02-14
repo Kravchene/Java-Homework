@@ -15,11 +15,7 @@ public class Task6 {
         int sum1 = a + b;
         int sum2 = a + c;
         int sum3 = c + b;
-        if (a>sum1 ||a>sum2 || a>sum3){
-            System.out.println("Такой треугольник существовать не может");
-        }else if (b>sum1 ||b>sum2 || b>sum3){
-            System.out.println("Такой треугольник существовать не может");
-        }else if (c>sum1 ||c>sum2 || c>sum3){
+        if (a<sum3 && b<sum2 && c<sum1){
             System.out.println("Такой треугольник существовать не может");
         }else {
             System.out.println("Тактакой треугольник может существовать ");

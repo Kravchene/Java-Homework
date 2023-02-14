@@ -6,17 +6,17 @@ public class Task5 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите число от 0 до 59: ");
-        int Numbers = in.nextInt();
-        Time(Numbers);
+        int numbers = in.nextInt();
+        time(numbers);
     }
-    static void Time (int Numbers){
-        if(Numbers<=14 && Numbers> -1){
+    static void time (int numbers){
+        if(numbers<=14 && numbers> -1){
             System.out.println("Первая часть часа");
-        } else if (Numbers>14 && Numbers<=29){
+        } else if (numbers>14 && numbers<=29){
             System.out.println("Вторая часть часа");
-        } else if (Numbers>29 && Numbers<=44){
+        } else if (numbers>29 && numbers<=44){
             System.out.println("Третья часть часа");
-        } else if (Numbers>44 && Numbers<=59){
+        } else if (numbers>44 && numbers<=59){
             System.out.println("Четвёртая часть часа");
         }else {
             System.out.println("Ошибка");
