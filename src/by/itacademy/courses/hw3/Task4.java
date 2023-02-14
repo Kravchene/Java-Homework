@@ -10,42 +10,15 @@ public class Task4 {
         int a = in.nextInt();
         int b = in.nextInt();
         int c = in.nextInt();
-        numbersMin(a, b, c);
-        numbers2(a, b, c);
-        numbersMax(a, b, c);
-        System.out.println();
         test(a, b, c);
-    }
+        System.out.println();
 
-    static void numbersMin(int a, int b, int c) {
-        if (a < b & a < c) {
-            System.out.println(a);
-        } else if (c < b & c < a) {
-            System.out.println(c);
-        } else if (b < c & b < a) {
-            System.out.println(b);
-        }
-    }
-
-    static void numbers2(int a, int b, int c) {
-
-        if ( a < b &  a > c || a > b &  a < c) {
-            System.out.println(a);
-        } else if (b < a &  b > c || b > a &  b < c) {
-            System.out.println(b);
-        } else if (c < b &  c > a || c > b &  c < a) {
-            System.out.println(c);
-        }
-    }
-
-    static void numbersMax(int a, int b, int c) {
-        if (a > b & a > c) {
-            System.out.println(a);
-        } else if (c > b & c > a) {
-            System.out.println(c);
-        } else if (b > c & b > a) {
-            System.out.println(b);
-        }
+        if (a < b && b < c) System.out.printf(a+"\n"+b+"\n"+c);
+        else if (a < b && c < b) System.out.printf(a+"\n"+ c+"\n"+b);
+        else if (b< a && a < c) System.out.printf(b+"\n"+a+"\n"+c);
+        else if (b < c && c < b) System.out.printf( b+"\n"+c+"\n"+a);
+        else if (c < c && a < b) System.out.printf( c+"\n"+a+"\n"+b);
+        else System.out.printf(c+"\n"+b+"\n"+a);
     }
     static void test(int a,int b,int c){
         int[] number = new int[3];
@@ -55,6 +28,6 @@ public class Task4 {
         Arrays.sort(number);
         for (int result : number){
             System.out.println(result);
-        }//так ещё будет проще
+        }
     }
 }
