@@ -10,13 +10,13 @@ public class Task5 {
         Time(Numbers);
     }
     static void Time (int Numbers){
-        if(Numbers<=14 & Numbers> -1){
+        if(Numbers<=14 && Numbers> -1){
             System.out.println("Первая часть часа");
-        } else if (Numbers>14 & Numbers<=29){
+        } else if (Numbers>14 && Numbers<=29){
             System.out.println("Вторая часть часа");
-        } else if (Numbers>29 & Numbers<=44){
+        } else if (Numbers>29 && Numbers<=44){
             System.out.println("Третья часть часа");
-        } else if (Numbers>44 & Numbers<=59){
+        } else if (Numbers>44 && Numbers<=59){
             System.out.println("Четвёртая часть часа");
         }else {
             System.out.println("Ошибка");
