@@ -13,12 +13,10 @@ public class Task7 {
         int increase =number1 * number2;
         System.out.print("Каков результат умножения первого числа на второе?\n"+number1+"*"+number2+"=");
         int answer = in.nextInt();
-        if (increase == answer && number1>=0 && number1<=9 && number2>=0 && number2<=9){
+        if (increase == answer){
             System.out.println("Правильно");
-        } else if (increase != answer && number1>=0 && number1<=9 && number2>=0 && number2<=9 ){
+        } else  {
             System.out.println("Неправильно!\nОтвет: " + increase);
-        }else {
-            System.out.println("Ошибка");
         }
     }
 }
