@@ -5,17 +5,27 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int number = in.nextInt();
+        System.out.println(sum(number)+"\n"+multiplication(number));
+    }
 
-        System.out.print("введите число 1: ");
-        int a = in.nextInt();
+    static int sum (int number){
+        int core = 0;
+        while (number != 0) {
+            core =core+number%10;
+            number /= 10;
+        }
+        return core;
+    }
 
-        System.out.print("введите число 2: ");
-        int b = in.nextInt();
-
-        int sum = a + b;
-        int multiplier = a * b;
-
-        System.out.println(a+"+"+b+"="+ sum);
-        System.out.println(a+"*"+b+"="+ multiplier);
+    static int multiplication (int number) {
+        int core = 1;
+        while (number != 0) {
+            core = core * (number%10);
+            number = number / 10;
+        }
+        return core;
     }
 }
+

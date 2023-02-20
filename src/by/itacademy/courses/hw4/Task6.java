@@ -1,35 +1,37 @@
 package by.itacademy.courses.hw4;
-
-import java.util.Arrays;
-
 public class Task6 {
     public static void main(String[] args) {
         int[] number = {545, -2100, 415, -10, 22, -35, -14, 45};
-        int[] number1 =new int[8];
-        int[] number2 =new int[8];
-        Arrays.sort(number);
-        for (int i = 0;i<number.length;i++){
-            if(number[i]<0) {
-                number1[i] = number[i];
-            }
-            if (number[i]>0){
-                    number2[i]=number[i];
+       sorting(number);
+    }
+    static void sorting(int[] number) {
+        int positiveElements = 0, negativeElements = 0;
+        for (int sortingPositiveOrNegative : number) {
+            if (sortingPositiveOrNegative > 0) {
+                positiveElements++;
+            } else if (sortingPositiveOrNegative < 0) {
+                negativeElements++;
             }
         }
-        for (int i = 0; i<number1.length;i++){
-            if (number1[i]==0){
-                continue;
+        int[] positiveNumber = new int[positiveElements], negativeNumber = new int[negativeElements];
+        int number1 = 0, number2 = 0;
+        for (int sorting : number) {
+            if (sorting > 0) {
+                positiveNumber[number1] = sorting;
+                number1++;
+            } else {
+                negativeNumber[number2] = sorting;
+                number2++;
             }
-            System.out.print(number1[i]+" ");
-
+        }
+        for (int sorting :positiveNumber){
+            System.out.print(sorting+", ");
         }
         System.out.println();
-        for (int i = 0; i<number2.length;i++){
-            if (number1[i]<0) {
-                continue;
-            }
-            System.out.print(number2[i]+" ");
-        }
 
+        for (int sorting :negativeNumber){
+            System.out.print(sorting+", ");
+        }
     }
+
 }

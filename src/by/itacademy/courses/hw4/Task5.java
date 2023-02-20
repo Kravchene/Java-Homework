@@ -8,8 +8,8 @@ public class Task5 {
 
     public static int getMin(int[] number) {
         int minNumber = number[0];
-        for (int i = 1; i < number.length; i++) {
-            if (number[i] < minNumber && i%2!=0) {
+        for (int i = 1; i < number.length; i=i+2) {
+            if (number[i] < minNumber) {
                 minNumber = number[i];
             }
         }

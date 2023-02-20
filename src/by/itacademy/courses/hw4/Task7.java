@@ -1,24 +1,28 @@
 package by.itacademy.courses.hw4;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Task7 {
     public static void main(String[] args) {
         int[] number = new int[5];
         Random randomNumber = new Random();
-        number[0] = randomNumber.nextInt();
-        number[1] = randomNumber.nextInt();
-        number[2] = randomNumber.nextInt();
-        number[3] = randomNumber.nextInt();
-        number[4] = randomNumber.nextInt();
-        for ( int numberResult : number){
-            System.out.print(numberResult+", ");
+
+
+        for (int i = 0; i < number.length; i++) {
+            number[i] = randomNumber.nextInt();
+            System.out.print(number[i] + ", ");
         }
         System.out.println();
-        for (int i= number.length-1;i>=0;i--){
-            System.out.print(number[i]+", ");
-        }
 
+        for (int i = 0; i < number.length / 2; i++) {
+            int b = number[i];
+            number[i] = number[number.length - 1 - i];
+            number[number.length-1-i] = b;
+        }
+        for (int number1: number){
+            System.out.print(number1+ ", ");
+        }
 
     }
 }
