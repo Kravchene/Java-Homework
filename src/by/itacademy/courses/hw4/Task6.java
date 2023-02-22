@@ -2,9 +2,6 @@ package by.itacademy.courses.hw4;
 public class Task6 {
     public static void main(String[] args) {
         int[] number = {545, -2100, 415, -10, 22, -35, -14, 45};
-       sorting(number);
-    }
-    static void sorting(int[] number) {
         int positiveElements = 0, negativeElements = 0;
         for (int sortingPositiveOrNegative : number) {
             if (sortingPositiveOrNegative > 0) {
@@ -13,7 +10,8 @@ public class Task6 {
                 negativeElements++;
             }
         }
-        int[] positiveNumber = new int[positiveElements], negativeNumber = new int[negativeElements];
+        int[] positiveNumber = new int[positiveElements];
+        int[] negativeNumber = new int[negativeElements];
         int number1 = 0, number2 = 0;
         for (int sorting : number) {
             if (sorting > 0) {
