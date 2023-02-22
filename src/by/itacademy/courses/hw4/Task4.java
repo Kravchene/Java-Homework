@@ -3,6 +3,7 @@ package by.itacademy.courses.hw4;
 public class Task4 {
     public static void main(String[] args) {
         int[] number = new int[]{1534,5,234,23,767,12120,8,9};
+
         getMinOrMax(number);
     }
 

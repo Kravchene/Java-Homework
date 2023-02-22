@@ -10,6 +10,5 @@ public class Task1 {
                     System.out.print(i +"*"+j+"="+(i * j)+ "\t");}
                 System.out.println();
             }
-        }
-
+    }
 }
