@@ -1,18 +1,22 @@
 package by.itacademy.courses.hw5;
 
 public class Person {
-        public static String fullName;
+        public String fullName;
         public int age;
-        public Person(){}
-        public Person(String fullName,int age){
-            this.fullName=fullName;
-            this.age=age;
+        public Person() {
         }
-        static String name(){
-            return fullName+" двигается";
+
+        public Person(String fullName, int age) {
+            this.fullName = fullName;
+            this.age = age;
         }
-        static String talk(){
-            return fullName+ " говорит";
+
+         String name() {
+            return fullName + " двигается";
         }
-    }
+
+         String talk() {
+            return fullName + " говорит";
+        }
+}
 
