@@ -1,29 +1,28 @@
 package by.itacademy.courses.hw6;
 
 public class Task5 {
-    public static void main(String[] args) {
-        String text = "Object-oriented programming is a programming language model organized around" +
-                " objects rather than \"actions\" and data rather than logic. Object-oriented" +
-                " programming blabla. Object-oriented programming bla.";
-        String replacedText1 = "Object-oriented programming";
-        String replacedText2 = "OOP";
-        editor(text,replacedText1,replacedText2);
+    public static void main(String[] args) throws Exception {
+        String inputString = "Object-oriented programming is a programming language model organized" +
+                " around objects and data rather than logic." +
+                " Object-oriented programming blabla." +
+                " Object-oriented programming bla.object-oriented programming object-oriented programming object-oriented programming";
+        System.out.println(changeTextInString(inputString, "object-oriented programming", "OOP"));
     }
 
-    static void editor(String text,String replacedText1,String replacedText2) {
-        int index = 0,number = 1;
-        while (true) {
-            index = text.indexOf(replacedText1, index);
-            if (index != -1) {
-                if (number % 2 == 0) {
-                    text = text.substring(0, index) + replacedText2 + text.substring(index + replacedText1.length());
+    public static String changeTextInString(String inputString, String stringToReplace, String replacingString) {
+        StringBuilder finalString = new StringBuilder(inputString);
+        int i = 0;
+            int counter = 0;
+            while (i != -1) {
+                if (counter % 2 == 1) {
+                    finalString.replace(i, i + stringToReplace.length(), replacingString);
+                    i += replacingString.length();
+                } else {
+                    i += stringToReplace.length();
                 }
-                number++;
-                index += replacedText1.length();
-            } else {
-                break;
+                i = finalString.toString().toLowerCase().indexOf(stringToReplace, i);
+                counter++;
             }
+            return finalString.toString();
         }
-        System.out.println(text);
     }
-}
