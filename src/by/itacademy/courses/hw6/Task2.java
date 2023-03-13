@@ -8,7 +8,7 @@ public class Task2 {
         String text = "столов 251 на собрании 45464454554 людей простых рабочих 5151452 и 151561534 ";
         Pattern pattern = Pattern.compile("\\w+");
         Matcher matcher = pattern.matcher(text);
-        String maxNumber = new String();
+        String maxNumber = null;
         int number =0;
         while (matcher.find()) {
             int numLength = text.substring(matcher.start(),matcher.end()).length();

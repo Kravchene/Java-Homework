@@ -2,7 +2,7 @@ package by.itacademy.courses.hw6;
 
 public class Task3 {
     public static void main(String[] args) {
-        String text = "Поменяйтттттт местами первое самое длинное слово с последним самым коротким";
+        String text = "Поменяйтттттт местами первое самое длинное слово с последним самым коротким.";
         String regex = ("\\s+");
         String[] words = text.split(regex);
         int arrayLength = words.length;
