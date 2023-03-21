@@ -1,4 +1,4 @@
-package by.itacademy.courses.hw7;
+package by.itacademy.courses.hw7.Task1;
 
 public class Student implements Scholarship {
     public String name;
@@ -26,12 +26,10 @@ public class Student implements Scholarship {
 
     @Override
     public int scholarship() {
-        int scholarship=0;
         if (averageMark==5){
-            scholarship=200;
+            return 100;
         }else {
-            scholarship=180;
+            return 80;
         }
-        return scholarship;
     }
 }

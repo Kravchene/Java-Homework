@@ -1,6 +1,6 @@
-package by.itacademy.courses.hw7;
+package by.itacademy.courses.hw7.Task1;
 
-public class GraduateStudent extends Student implements Scholarship{
+public class GraduateStudent extends Student {
 
     public String scientificWork;
 
@@ -21,12 +21,10 @@ public class GraduateStudent extends Student implements Scholarship{
 
     @Override
     public int scholarship() {
-        int scholarship=0;
         if (averageMark==5){
-            scholarship=100;
+            return 200;
         }else {
-            scholarship=80;
+            return 180;
         }
-        return scholarship;
     }
 }
