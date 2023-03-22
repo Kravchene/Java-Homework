@@ -4,6 +4,7 @@ public class Task3 {
     public static void main(String[] args) {
         String text = "Поменяйтттттт местами первое самое длинное слово с последним самым коротким.";
         String regex = ("\\s+");
+
         String[] words = text.split(regex);
         int arrayLength = words.length;
         int lengthMax = 0;
@@ -22,15 +23,21 @@ public class Task3 {
                 }
             }
         }
-        replacement(text,indexMax,indexMin,regex);
+        String[] words1 = replacement(text, indexMax, indexMin, regex);
+        print(words1);
     }
-        static void replacement (String text,int indexMax,int indexMin,String regex){
-        String[]  words = text.split(regex);
+
+    static String[] replacement(String text, int indexMax, int indexMin, String regex) {
+        String[] words = text.split(regex);
         String string = words[indexMax];
         words[indexMax] = words[indexMin];
         words[indexMin] = string;
-        for (String text2 : words){
-            System.out.print(text2+" ");
+        return words;
+    }
+
+    static void print(String[] a) {
+        for (String text2 : a) {
+            System.out.print(text2 + " ");
         }
     }
 }
