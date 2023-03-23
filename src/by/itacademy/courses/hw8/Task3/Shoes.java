@@ -1,13 +1,16 @@
-package by.itacademy.courses.hw8;
+package by.itacademy.courses.hw8.Task3;
+
+import by.itacademy.courses.hw8.Task3.Clothes;
 
 public class Shoes extends Clothes {
-    Shoes( int size) {
+    Shoes(int size) {
         super(size);
     }
 
-    Shoes( int size, String colour) {
+    Shoes(int size, String colour) {
         super(size, colour);
     }
+
     Shoes(String model, int size, String colour) {
         super(model, size, colour);
     }

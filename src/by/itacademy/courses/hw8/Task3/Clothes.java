@@ -1,4 +1,4 @@
-package by.itacademy.courses.hw8;
+package by.itacademy.courses.hw8.Task3;
 
 import java.util.Objects;
 
@@ -6,18 +6,22 @@ public class Clothes {
     String model;
     int size;
     String colour;
+
     Clothes(int size) {
         this.size = size;
     }
-    Clothes(int size,String colour) {
+
+    Clothes(int size, String colour) {
         this.size = size;
         this.colour = colour;
     }
-    Clothes(String model,int size,String colour){
-        this.model=model;
-        this.size=size;
-        this.colour=colour;
+
+    Clothes(String model, int size, String colour) {
+        this.model = model;
+        this.size = size;
+        this.colour = colour;
     }
+
     public boolean equals2(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -49,13 +53,14 @@ public class Clothes {
     public int hashCode1() {
         return Objects.hash(size, colour);
     }
+
     public int hashCode2() {
         return Objects.hash(size);
     }
 
     @Override
     public String toString() {
-        return "Модель = "+model +", размер = " + size + ", цвет = " + colour ;
+        return "Модель = " + model + ", размер = " + size + ", цвет = " + colour;
     }
 }
 
