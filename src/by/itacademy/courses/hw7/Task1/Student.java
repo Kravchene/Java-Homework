@@ -7,12 +7,12 @@ public class Student implements Scholarship {
     public String groupName;
     public int averageMark;
 
-    Student(String name, String surname, int courseNumber,String groupName,int averageMark){
-        this.name=name;
-        this.surname=surname;
-        this.courseNumber=courseNumber;
-        this.groupName=groupName;
-        this.averageMark=averageMark;
+    Student(String name, String surname, int courseNumber, String groupName, int averageMark) {
+        this.name = name;
+        this.surname = surname;
+        this.courseNumber = courseNumber;
+        this.groupName = groupName;
+        this.averageMark = averageMark;
     }
 
     @Override
@@ -21,14 +21,14 @@ public class Student implements Scholarship {
                 ", surname='" + surname + '\'' +
                 ", courseNumber=" + courseNumber +
                 ", groupName='" + groupName + '\'' +
-                ", averageMark=" + averageMark ;
+                ", averageMark=" + averageMark;
     }
 
     @Override
     public int scholarship() {
-        if (averageMark==5){
+        if (averageMark == 5) {
             return 100;
-        }else {
+        } else {
             return 80;
         }
     }

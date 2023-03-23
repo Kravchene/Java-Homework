@@ -5,7 +5,7 @@ public class EducationalInstitution {
     Student student2 = new Student("Александр", "Круг", 25, "Физики", 5);
     GraduateStudent graduateStudent1 = new GraduateStudent("Павел", "Сыч", 12, "Физики", 4, "Физика полёта ракеты");
     GraduateStudent graduateStudent2 = new GraduateStudent("Никита", "Елисов", 25, "Физики", 5, "Оптические иллюзии");
-    Student[] students = new Student[]{graduateStudent1,graduateStudent2,student1, student2};
+    Student[] students = new Student[]{graduateStudent1, graduateStudent2, student1, student2};
 
     void list() {
         for (Student studentX : students) {

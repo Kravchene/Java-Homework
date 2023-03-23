@@ -6,11 +6,11 @@ public class Flowers {
     String colour;
     int lifetime;
 
-    Flowers(String flowerName ,double price,String colour,int lifetime){
-        this.price=price;
-        this.colour=colour;
-        this.lifetime=lifetime;
-        this.flowerName=flowerName;
+    Flowers(String flowerName, double price, String colour, int lifetime) {
+        this.price = price;
+        this.colour = colour;
+        this.lifetime = lifetime;
+        this.flowerName = flowerName;
     }
 }
 

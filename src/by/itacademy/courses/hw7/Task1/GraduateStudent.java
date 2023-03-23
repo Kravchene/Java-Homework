@@ -4,9 +4,9 @@ public class GraduateStudent extends Student {
 
     public String scientificWork;
 
-    GraduateStudent(String name, String surname, int courseNumber, String groupName, int averageMark,String scientificWork) {
+    GraduateStudent(String name, String surname, int courseNumber, String groupName, int averageMark, String scientificWork) {
         super(name, surname, courseNumber, groupName, averageMark);
-        this.scientificWork=scientificWork;
+        this.scientificWork = scientificWork;
     }
 
     @Override
@@ -21,9 +21,9 @@ public class GraduateStudent extends Student {
 
     @Override
     public int scholarship() {
-        if (averageMark==5){
+        if (averageMark == 5) {
             return 200;
-        }else {
+        } else {
             return 180;
         }
     }
