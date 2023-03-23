@@ -42,7 +42,7 @@ public class ClothingStore {
         listShoes.add(shoes4);
     }
 
-    void a(int a) {
+    void shop(int a) {
         switch (a) {
             case 1:
                 System.out.println("Вы попали в раздел одежда");
