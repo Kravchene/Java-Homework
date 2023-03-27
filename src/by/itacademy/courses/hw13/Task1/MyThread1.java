@@ -7,11 +7,16 @@ public class MyThread1 extends Thread implements ThreadMethod {
         try {
             MyThread thread = new MyThread();
             thread.start();
+            thread.join();
+            System.out.println("WAITING");
+
 
             MyThread.sleep(2000);
-            thread.stop();
+            System.out.println("TIMED_WAITING");
+
+            throw new InterruptedException();
         } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
+            System.out.println("BLOCKER");
             //BLOCKER
         }
     }

@@ -5,13 +5,15 @@ public class MyThread2 extends Thread implements ThreadMethod {
     public void thread() {
         try {
             MyThread thread = new MyThread();
+            System.out.println("NEW");
             thread.start();
+            System.out.println("RUNNABLE");
 
             MyThread.sleep(1000);
             thread.stop();
+            System.out.println("TERMINATED");
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
-            //BLOCKER
         }
     }
 }
