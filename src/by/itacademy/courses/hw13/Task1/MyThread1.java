@@ -17,7 +17,6 @@ public class MyThread1 extends Thread implements ThreadMethod {
             throw new InterruptedException();
         } catch (InterruptedException e) {
             System.out.println("BLOCKER");
-            //BLOCKER
         }
     }
 }
