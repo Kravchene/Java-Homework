@@ -1,26 +1,41 @@
 package by.itacademy.courses.hw7.Task4;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Bouquet {
-    Flowers[] flowers = new Flowers[]{new Flowers("Likoris", 5.5, "Red", 7),
-            new Flowers("Rose", 4.5, "Red", 8),
-            new Flowers("Lily", 3.1, "white", 5)};
-
-    void price() {
-        double sum = flowers[0].price + flowers[1].price + flowers[2].price;
-        System.out.println("Cтоимость букета: " + sum + "BYN");
-    }
+    public List<Flower> listFlower = new ArrayList<>();
+    List<Double> listDoubles = new ArrayList<>();
 
     void colour() {
-        String color = flowers[0].colour + ", " + flowers[1].colour + ", " + flowers[2].colour;
-        System.out.println("Букет состоит из следующих цветов: " + color);
+        String colour = "";
+        for (Flower a : listFlower) {
+            colour = colour + a.getColour() + ", ";
+        }
+        System.out.println("Букет состоит из следующих цветов: " + colour);
     }
 
     void lifetime() {
-        int[] lifetime = new int[]{flowers[0].lifetime, flowers[1].lifetime, flowers[2].lifetime};
-        Arrays.sort(lifetime);
-        int number = lifetime.length - 1;
-        System.out.println("Букет будет жить: " + lifetime[number] + " дней");
+        int lifetimeMax = 0;
+        for (Flower a : listFlower) {
+            if (a.getLifetime() > lifetimeMax) {
+                lifetimeMax = a.getLifetime();
+            }
+        }
+        System.out.println("Букет будет жить: " + lifetimeMax + " дней");
     }
+
+    public void addFlower(String flowerName, double price, String colour, int lifetime) {
+        listFlower.add(new Flower(flowerName, price, colour, lifetime));
+        listDoubles.add(price);
+    }
+
+    public void cost() {
+        double costFlower = 0;
+        for (Double a : listDoubles) {
+            costFlower = a + costFlower;
+        }
+        System.out.println("Общая стоимость букета: " + costFlower + " BYN");
+    }
+
 }

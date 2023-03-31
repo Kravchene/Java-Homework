@@ -1,21 +1,36 @@
 package by.itacademy.courses.hw7.Task3;
 
+import java.util.*;
+
 public class Basket {
-    Fruit[] fruits = new Fruit[]{new Fruit("apricot", 3.1, 4.6),
-            new Fruit("apple", 5.5, 3.6),
-            new Fruit("pear", 3.5, 7)};
-    Double[] doubles = new Double[]{fruits[0].weight, fruits[1].weight, fruits[2].weight};
+    public List<Fruit> listFruits = new ArrayList<>();
+    List<Double> listDoubles = new ArrayList<>();
+
+    public void addFruit(String fruit, double weight, double fruitPrice) {
+        listFruits.add(new Fruit(fruit, weight, fruitPrice));
+        listDoubles.add(weight);
+    }
 
     public double cost() {
-        return fruits[0].price(doubles[0]) + fruits[1].price(doubles[1]) + fruits[2].price(doubles[2]);
+        double costFruit = 0;
+        int i = 0;
+        for (Double a : listDoubles) {
+            costFruit = listFruits.get(i).price(a) + costFruit;
+            i++;
+        }
+        return costFruit;
     }
 
     public void basketPrice() {
-        System.out.println("Общая стоимость фруктов в корзине: " + cost() + "BYN\n" + "Общая цена яблок: " + fruits[0].price(doubles[0]) + "BYN\n" +
-                "Общая цена груш: " + fruits[1].price(doubles[1]) + "BYN\n" + "Общая цена абрикосов: " + fruits[2].price(doubles[2]) + "BYN");
+        int i = 0;
+        System.out.println("Общая стоимость фруктов в корзине: " + cost() + " BYN");
+        for (Fruit a : listFruits) {
+            System.out.println("Общая цена " + a.getFruit() + ": " + listFruits.get(i).price(listDoubles.get(i)) + " BYN");
+            i++;
+        }
     }
 
     void printManufacturerInfo() {
-        System.out.print("Made in Belarus");
+        System.out.println("Made in Belarus");
     }
 }
