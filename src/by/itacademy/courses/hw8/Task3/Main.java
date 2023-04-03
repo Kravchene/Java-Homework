@@ -7,6 +7,7 @@ public class Main {
         ClothingStore clothingStore = new ClothingStore();
         clothingStore.hello();
         clothingStore.creatingAndFillingCollection();
-        clothingStore.a(clothingStore.usersDecision());
+        Scanner scanner=new Scanner(System.in);
+        clothingStore.shop(scanner.nextInt());
     }
 }

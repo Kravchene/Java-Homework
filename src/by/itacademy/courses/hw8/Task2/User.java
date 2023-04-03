@@ -1,17 +1,34 @@
 package by.itacademy.courses.hw8.Task2;
 
 public class User {
-    static String login;
-    static String password;
+    private String login;
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
 
     User(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
-    static class Query {
+    class Query {
         public void printToLog() {
-            System.out.println("Пользователь с логином: " + login + "\nИ паролем: " + password + "\nОтправил запрос");
+            System.out.println("Пользователь с логином: " + getLogin() + "\nИ паролем: " + getPassword() + "\nОтправил запрос");
         }
     }
 }

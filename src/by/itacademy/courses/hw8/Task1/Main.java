@@ -2,13 +2,21 @@ package by.itacademy.courses.hw8.Task1;
 
 public class Main {
     public static void main(String[] args) {
-        Food food = new Food("a");
+        Food food = new Food("ДРАНІКІ");
+        System.out.println("Сегодня мы готовим "+food.getStr());
         Cookable cookable = new Cookable() {
             @Override
             public void cook(String str) {
-                System.out.println("cook");
+                System.out.println("Бульбу надраць на тарцы, сцадзіць лішні сок. Патаркаваць туды ж цыбуліну, разбіць 2 яйкі і дадаць солі. Старанна перамяшаць, дадаць муку, каб атрымалася бліннае цеста.\n" +
+                        "\n" +
+                        "Выпякаць бліны на алеі да атрымання залацістага колеру.\n" +
+                        "\n" +
+                        "Выкласці спечаныя бліны ў рондаль або керамічны посуд, разрэзаць на 4 часткі і заліць смятанай (калі заліўку зрабіць на падсмажанай цыбулі з сушанымі баравічкамі, то гэта ўжо будзе святочная страва).\n" +
+                        "\n" +
+                        "Потым рондаль закрыць накрыўкай і на 20 хвілін паставіць у духоўку пры тэмпературы 150° С.");
             }
         };
-        food.prepare(cookable, food.str);
+        food.prepare(cookable, food.getStr());
+
     }
 }
