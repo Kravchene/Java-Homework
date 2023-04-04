@@ -1,6 +1,10 @@
 package by.itacademy.courses.hw9;
 
-public class Calculator< T, V, S> {
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Calculator<T, V, S> {
     T a;
     V b;
     S s;
@@ -11,30 +15,26 @@ public class Calculator< T, V, S> {
         this.s = s;
     }
 
-    private static  <T , V > double sumDouble(T a, V b) {
-        double c;
-        return c = (double) a + (double) b;
+    private static <T, V> double sumDouble(T a, V b) {
+        return (double) a + (double) b;
     }
 
-    private static  <T , V > double multiplyDouble(T a, V b) {
-        double c;
-        return c = (double) a * (double) b;
+    private static <T, V> double multiplyDouble(T a, V b) {
+        return (double) a * (double) b;
     }
 
-    private static <T , V > double divideDouble(T a, V b) {
-        double c;
-        return c = (double) a / (double) b;
+    private static <T, V> double divideDouble(T a, V b) {
+        return (double) a / (double) b;
     }
 
-    private static <T , V > double subtractionDouble(T a, V b) {
-        double c;
-        return c = (double) a - (double) b;
+    private static <T, V> double subtractionDouble(T a, V b) {
+        return (double) a - (double) b;
     }
 
     public void sad() {
         switch ((String) s) {
             case "+":
-                System.out.println(sumDouble(a,b));
+                System.out.println(sumDouble(a, b));
                 break;
             case "*":
                 System.out.println(multiplyDouble(a, b));
