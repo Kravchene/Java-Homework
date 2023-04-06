@@ -1,4 +1,4 @@
-package by.itacademy.courses.hw10;
+package by.itacademy.courses.hw10.Task1;
 
 import java.util.Set;
 import java.util.TreeSet;
