@@ -5,12 +5,11 @@ import java.util.Deque;
 
 public class Main {
     public static void main(String[] args) {
-        MaxNumber maxNumber = new MaxNumber();
         Deque<Double> deque = new ArrayDeque<>();
         deque.push(2412.4);
         deque.push(34.5);
         deque.push(1.24);
-        System.out.println(maxNumber.max(deque));
+        System.out.println(MaxNumber.max(deque));
         System.out.println(deque);
         deque.pop();
         System.out.println(deque);

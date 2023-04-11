@@ -7,9 +7,8 @@ public class Main {
 
         System.out.println("Введите любой текст");
         Scanner in = new Scanner(System.in);
-        String text = in.nextLine();
-        Search search = new Search();
-        System.out.println(search.searchInTheText(text));
+        Search.setText(in.nextLine());
+        System.out.println(Search.searchInTheText());
 
     }
 }

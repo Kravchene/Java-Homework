@@ -3,16 +3,16 @@ package by.itacademy.courses.hw10.Task4;
 import java.util.List;
 
 public class BuyingPet {
-    static void buy(double a, List<Pet> v) {
+    static void buy(double money, List<Pet> v) {
         int index = 0;
-        boolean b = false;
+        boolean didYouSellTheProduct = false;
         for (Pet pet : v) {
-            if (pet.getPrice() == a) {
+            if (pet.getPrice() == money) {
                 index = v.indexOf(pet);
-                b = true;
+                didYouSellTheProduct = true;
             }
         }
-        if (b == true) {
+        if (didYouSellTheProduct) {
             v.remove(index);
             System.out.println("Спасибо за покупку");
         } else {
