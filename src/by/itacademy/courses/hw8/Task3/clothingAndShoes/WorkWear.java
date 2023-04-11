@@ -1,4 +1,4 @@
-package by.itacademy.courses.hw8.Task3.Clothing_and__shoes;
+package by.itacademy.courses.hw8.Task3.clothingAndShoes;
 
 public class WorkWear extends Clothes {
     private String colProtectionLevel;
@@ -43,6 +43,10 @@ public class WorkWear extends Clothes {
     public String toString() {
         return super.toString() + ", colProtectionLevel='" + getColProtectionLevel() + '\'' +
                 ", acidAndWaterProtectionClasses='" + getAcidAndWaterProtectionClasses();
+    }
+
+    public String getColour() {
+        return null;
     }
 }
 

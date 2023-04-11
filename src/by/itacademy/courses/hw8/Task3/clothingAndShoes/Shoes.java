@@ -1,4 +1,4 @@
-package by.itacademy.courses.hw8.Task3.Clothing_and__shoes;
+package by.itacademy.courses.hw8.Task3.clothingAndShoes;
 
 public class Shoes extends Clothes {
     public Shoes(int size) {
