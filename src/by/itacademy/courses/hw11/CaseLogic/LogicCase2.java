@@ -1,16 +1,18 @@
-package by.itacademy.courses.hw11.CaseLogic;
+package by.itacademy.courses.hw11.caseLogic;
 
-import by.itacademy.courses.hw11.Exception.UserNotExistException;
-import by.itacademy.courses.hw11.Exception.WrongPasswordException;
 import by.itacademy.courses.hw11.Printer;
 import by.itacademy.courses.hw11.UserAccount;
+import by.itacademy.courses.hw11.exception.UserNotExistException;
+import by.itacademy.courses.hw11.exception.WrongPasswordException;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LogicCase2 {
-    static boolean check() {
+    UserAccount userAccount = new UserAccount();
+
+    boolean check() {
         boolean exit = false;
         boolean check1 = false;
         String login2 = null;
@@ -42,10 +44,10 @@ public class LogicCase2 {
             }
         }
         UserAccount userRepository1 = new UserAccount(login2, password2);
-        boolean loginVerification = UserAccount.loginVerification(userRepository1);
+        boolean loginVerification = userAccount.loginVerification(userRepository1);
 
         try {
-            if (loginVerification==true) {
+            if (loginVerification == true) {
             } else {
                 throw new UserNotExistException();
             }
@@ -53,7 +55,7 @@ public class LogicCase2 {
             a.printException();
         }
 
-        boolean passwordVerification = UserAccount.passwordVerification(userRepository1);
+        boolean passwordVerification = userAccount.passwordVerification(userRepository1);
         try {
             if (passwordVerification) {
             } else {

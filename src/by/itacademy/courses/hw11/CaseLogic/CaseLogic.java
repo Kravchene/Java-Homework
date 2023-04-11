@@ -1,4 +1,4 @@
-package by.itacademy.courses.hw11.CaseLogic;
+package by.itacademy.courses.hw11.caseLogic;
 
 import by.itacademy.courses.hw11.Printer;
 
@@ -6,6 +6,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CaseLogic {
+    LogicCase1 logicCase1 = new LogicCase1();
+    LogicCase2 logicCase2 = new LogicCase2();
+
     public void caseLogic() {
         boolean exit = false;
         while (exit == false) {
@@ -15,11 +18,11 @@ public class CaseLogic {
                 switch (in.nextInt()) {
                     case 1:
                         Printer.registration();
-                        LogicCase1.creatingLoginAndPassword();
+                        logicCase1.creatingLoginAndPassword();
                         break;
                     case 2:
                         Printer.userAuthorization();
-                        boolean exit1 = LogicCase2.check();
+                        boolean exit1 = logicCase2.check();
                         exit = exit1;
                         break;
                     case 3:

@@ -1,4 +1,4 @@
-package by.itacademy.courses.hw11.Exception;
+package by.itacademy.courses.hw11.exception;
 
 public class UserNotExistException extends Exception implements PrintException {
     public UserNotExistException() {

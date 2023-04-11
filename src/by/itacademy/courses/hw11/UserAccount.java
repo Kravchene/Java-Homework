@@ -1,17 +1,21 @@
 package by.itacademy.courses.hw11;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Objects;
 
 public class UserAccount implements Cloneable {
     String login;
     String password;
 
+    public UserAccount() {
+    }
+
     public UserAccount(String login, String password) {
         this.login = login;
         this.password = password;
     }
+
+    UserRepository userRepository = new UserRepository();
 
     public String getLogin() {
         return login;
@@ -28,14 +32,9 @@ public class UserAccount implements Cloneable {
         return Objects.equals(password, that.password);
     }
 
-    public static void repository(String a,String b) {
-        UserAccount userAccount=new UserAccount(a,b);
-        UserRepository.getUser().add(userAccount);
-    }
-
-    public static boolean loginVerification(UserAccount a) {
+    public boolean loginVerification(UserAccount a) {
         boolean trueOrFalse = false;
-        for (UserAccount search : UserRepository.getUser()) {
+        for (UserAccount search : userRepository.getListOfUsers()) {
             if (a.getLogin().contains(search.login)) {
                 trueOrFalse = true;
             }
@@ -43,9 +42,9 @@ public class UserAccount implements Cloneable {
         return trueOrFalse;
     }
 
-    public static boolean passwordVerification(UserAccount a) {
+    public boolean passwordVerification(UserAccount a) {
         boolean trueOrFalse = false;
-        for (UserAccount search : UserRepository.getUser()) {
+        for (UserAccount search : userRepository.getListOfUsers()) {
             if (a.equals(search)) {
                 trueOrFalse = true;
             }

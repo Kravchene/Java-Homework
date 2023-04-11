@@ -1,16 +1,21 @@
-package by.itacademy.courses.hw11.CaseLogic;
+package by.itacademy.courses.hw11.caseLogic;
 
-import by.itacademy.courses.hw11.Exception.WrongLoginException;
-import by.itacademy.courses.hw11.Exception.WrongPasswordException;
 import by.itacademy.courses.hw11.Printer;
+import by.itacademy.courses.hw11.RegistrationService;
 import by.itacademy.courses.hw11.UserAccount;
+import by.itacademy.courses.hw11.exception.WrongLoginException;
+import by.itacademy.courses.hw11.exception.WrongPasswordException;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LogicCase1 {
-    static void creatingLoginAndPassword() {
+    final String regexLogin = "^\\S[a-zA-Z-_]{5,20}\\S$";
+    final String regexPassword = "^\\S[a-zA-Z\\d-_]{8,}\\S$";
+    UserAccount userAccount = new UserAccount();
+
+    void creatingLoginAndPassword() {
         boolean check = false;
         String login1 = null;
         while (check == false) {
@@ -18,8 +23,7 @@ public class LogicCase1 {
                 Scanner scannerLogin = new Scanner(System.in);
                 System.out.print("Введите Логин: ");
                 String login = scannerLogin.nextLine();
-                String regex = "^\\S[a-zA-Z-_]{5,20}\\S$";
-                Pattern pattern = Pattern.compile(regex);
+                Pattern pattern = Pattern.compile(regexLogin);
                 Matcher matcher = pattern.matcher(login);
                 if (matcher.find()) {
                     check = true;
@@ -40,8 +44,7 @@ public class LogicCase1 {
                 Scanner scannerPassword = new Scanner(System.in);
                 System.out.print("Введите пароль: ");
                 String password = scannerPassword.next();
-                String regex = "^\\S[a-zA-Z\\d-_]{8,}\\S$";
-                Pattern pattern = Pattern.compile(regex);
+                Pattern pattern = Pattern.compile(regexPassword);
                 Matcher matcher = pattern.matcher(password);
                 if (matcher.find()) {
                     check2 = true;
@@ -54,7 +57,7 @@ public class LogicCase1 {
                 a.printException();
             }
         }
-        UserAccount.repository(login1,password1);
+        RegistrationService.repository(login1, password1);
         System.out.println("Пользователь успешно зарегистрирован");
     }
 }
