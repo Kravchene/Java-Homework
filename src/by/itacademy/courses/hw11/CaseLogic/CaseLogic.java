@@ -6,8 +6,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CaseLogic {
-    LogicCase1 logicCase1 = new LogicCase1();
-    LogicCase2 logicCase2 = new LogicCase2();
+    RegistrationService logicCase1 = new RegistrationService();
+    AuthorizationService logicCase2 = new AuthorizationService();
 
     public void caseLogic() {
         boolean exit = false;

@@ -14,9 +14,6 @@ public class UserAccount implements Cloneable {
         this.login = login;
         this.password = password;
     }
-
-    UserRepository userRepository = new UserRepository();
-
     public String getLogin() {
         return login;
     }
@@ -32,23 +29,5 @@ public class UserAccount implements Cloneable {
         return Objects.equals(password, that.password);
     }
 
-    public boolean loginVerification(UserAccount a) {
-        boolean trueOrFalse = false;
-        for (UserAccount search : userRepository.getListOfUsers()) {
-            if (a.getLogin().contains(search.login)) {
-                trueOrFalse = true;
-            }
-        }
-        return trueOrFalse;
-    }
 
-    public boolean passwordVerification(UserAccount a) {
-        boolean trueOrFalse = false;
-        for (UserAccount search : userRepository.getListOfUsers()) {
-            if (a.equals(search)) {
-                trueOrFalse = true;
-            }
-        }
-        return trueOrFalse;
-    }
 }

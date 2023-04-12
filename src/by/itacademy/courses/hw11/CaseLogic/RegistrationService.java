@@ -1,8 +1,7 @@
 package by.itacademy.courses.hw11.caseLogic;
 
 import by.itacademy.courses.hw11.Printer;
-import by.itacademy.courses.hw11.RegistrationService;
-import by.itacademy.courses.hw11.UserAccount;
+
 import by.itacademy.courses.hw11.exception.WrongLoginException;
 import by.itacademy.courses.hw11.exception.WrongPasswordException;
 
@@ -10,10 +9,9 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LogicCase1 {
+public class RegistrationService {
     final String regexLogin = "^\\S[a-zA-Z-_]{5,20}\\S$";
     final String regexPassword = "^\\S[a-zA-Z\\d-_]{8,}\\S$";
-    UserAccount userAccount = new UserAccount();
 
     void creatingLoginAndPassword() {
         boolean check = false;
@@ -57,7 +55,7 @@ public class LogicCase1 {
                 a.printException();
             }
         }
-        RegistrationService.repository(login1, password1);
+        by.itacademy.courses.hw11.RegistrationService.repository(login1, password1);
         System.out.println("Пользователь успешно зарегистрирован");
     }
 }
