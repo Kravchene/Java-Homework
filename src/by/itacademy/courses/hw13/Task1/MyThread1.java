@@ -1,9 +1,10 @@
 package by.itacademy.courses.hw13.Task1;
 
-public class MyThread1 extends Thread implements ThreadMethod {
+public class MyThread1 extends Thread {
 
-    @Override
+
     public void thread() {
+        System.out.println(Thread.currentThread().getState() + " состояние runnable");
         try {
             MyThread thread = new MyThread();
             thread.start();
