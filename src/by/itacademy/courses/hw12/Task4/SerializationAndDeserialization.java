@@ -36,12 +36,12 @@ public class SerializationAndDeserialization {
         }
     }
 
-    void Deserialization() {
-        List listFromFile;
+    void deserialization() {
+        List<Person> listFromFile;
         try (FileInputStream inputStream = new FileInputStream("D:\\Java-Homework\\Java-Homework\\src\\by\\itacademy\\courses\\hw12\\Task4\\Person.txt");
              ObjectInputStream objectInputStream = new ObjectInputStream(inputStream)) {
-            listFromFile = (List) objectInputStream.readObject();
-            Collections.sort(listFromFile, new Comparator<Person>() {
+            listFromFile = (List<Person>) objectInputStream.readObject();
+            listFromFile.sort(new Comparator<Person>() {
                 public int compare(Person o1, Person o2) {
                     return o1.toString().compareTo(o2.toString());
                 }

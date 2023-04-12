@@ -1,14 +1,12 @@
 package by.itacademy.courses.hw12.Task3;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class WorkingWithFiles {
     File file = new File("D:\\Java-Homework\\Java-Homework\\src\\by\\itacademy\\courses\\hw12\\Task3\\task3.txt");
     int[] number1 = new int[30];
-    byte[] number2 = new byte[30];
     double a = 0;
     double b = 0;
 
@@ -29,14 +27,9 @@ public class WorkingWithFiles {
     }
 
     void output() {
-        try (FileInputStream fileInputStream = new FileInputStream(file)) {
-            fileInputStream.read(number2);
-            for (int r : number1) {
-                System.out.println(r);
+            for (int readableNumbers : number1) {
+                System.out.println(readableNumbers);
             }
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
         System.out.println("среднее арифметическое: " + b);
     }
 }

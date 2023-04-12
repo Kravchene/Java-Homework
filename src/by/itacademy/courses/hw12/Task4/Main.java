@@ -5,6 +5,6 @@ public class Main {
         SerializationAndDeserialization serializationAndDeserialization = new SerializationAndDeserialization();
         serializationAndDeserialization.personAdd();
         serializationAndDeserialization.serialization();
-        serializationAndDeserialization.Deserialization();
+        serializationAndDeserialization.deserialization();
     }
 }

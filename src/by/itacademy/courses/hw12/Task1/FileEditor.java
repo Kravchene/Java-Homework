@@ -19,7 +19,7 @@ public class FileEditor {
         }
     }
 
-    void writer1() {
+    void writer1()   {
         try {
             FileWriter in1 = new FileWriter("D:\\Java-Homework\\Java-Homework\\src\\by\\itacademy\\courses\\hw12\\Task1\\in1.txt");
             FileWriter in2 = new FileWriter("D:\\Java-Homework\\Java-Homework\\src\\by\\itacademy\\courses\\hw12\\Task1\\in2.txt");
