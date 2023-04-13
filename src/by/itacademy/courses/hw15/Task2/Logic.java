@@ -1,33 +1,34 @@
 package by.itacademy.courses.hw15.Task2;
 
+
+
 import java.util.Collection;
+import java.util.stream.Stream;
 
 public class Logic {
-    public static int minInt(Collection<Integer> a) {
-        return a.stream().min(Integer::compare).get();
+    public static int minInt(Stream<Integer> a) {
+        return a.min(Integer::compare).orElse(0);
     }
 
-    public static int maxInt(Collection<Integer> a) {
-        return a.stream().max(Integer::compare).get();
+    public static int maxInt(Stream<Integer> a) {
+        return a.max(Integer::compare).orElse(0);
     }
 
-    public static int sumOfAllNumbers(Collection<Integer> a) {
-        return a.stream().mapToInt(Integer::intValue).sum();
+    public static int sumOfAllNumbers(Stream<Integer> a) {
+        return a.mapToInt(Integer::intValue).sum();
     }
 
     public static double arithmetic(Collection<Integer> a, double b) {
         return b / a.size();
     }
 
-    public static double theProductOfNumbers(Collection<Integer> number) {
-        return number.stream()
-                .mapToDouble(a -> a)
+    public static double theProductOfNumbers(Stream<Integer> number) {
+        return number.mapToDouble(a -> a)
                 .reduce(1, (a, b) -> a * b);
     }
 
-    public static int sumOfAllDigits(Collection<Integer> number) {
-        return number.stream()
-                .map(x -> Integer.toString(x))
+    public static int sumOfAllDigits(Stream<Integer> number) {
+        return number.map(x -> Integer.toString(x))
                 .flatMapToInt(CharSequence::chars)
                 .map(Character::getNumericValue)
                 .sum();

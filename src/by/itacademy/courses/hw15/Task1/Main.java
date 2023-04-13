@@ -7,8 +7,7 @@ import java.util.Collection;
 public class Main {
     public static void main(String[] args) {
         Collection<String> col = new ArrayList<>();
-        Text text = new Text();
-        Collection<String> splitText = text.test();
+        Collection<String> splitText = Text.textSplit();
         String searchWords = "login";
         BusinessLogic.searchWordsMethod(searchWords, splitText);
         BusinessLogic.maxLengthWords(col);
