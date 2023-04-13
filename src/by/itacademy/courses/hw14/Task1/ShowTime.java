@@ -4,9 +4,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class ShowTime extends Thread implements ScannerDateTime {
+public class ShowTime extends Thread  {
     public void run() {
-        int timeSleep = scannerDateTime();
+        int timeSleep = scannerDateTime()*1000;
         while (true) {
             LocalDateTime localDateTime = LocalDateTime.now();
             try {
@@ -18,7 +18,6 @@ public class ShowTime extends Thread implements ScannerDateTime {
         }
     }
 
-    @Override
     public int scannerDateTime() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
