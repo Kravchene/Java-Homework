@@ -1,23 +1,15 @@
 package by.itacademy.courses.hw13.Task1;
 
-public class MyThread1 extends Thread {
+import static java.lang.Thread.sleep;
 
-
-    public void thread() {
-        System.out.println(Thread.currentThread().getState() + " состояние runnable");
+public class MyThread1 implements Runnable {
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getState());
         try {
-            MyThread thread = new MyThread();
-            thread.start();
-            thread.join();
-            System.out.println("WAITING");
-
-
-            MyThread.sleep(2000);
-            System.out.println("TIMED_WAITING");
-
-            throw new InterruptedException();
-        } catch (InterruptedException e) {
-            System.out.println("BLOCKER");
+            sleep(1000);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
