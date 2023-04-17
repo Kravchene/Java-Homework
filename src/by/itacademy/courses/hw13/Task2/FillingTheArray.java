@@ -3,7 +3,7 @@ package by.itacademy.courses.hw13.Task2;
 import java.util.Scanner;
 
 public class FillingTheArray {
-    double[] array() {
+   static double[] array() {
         Scanner scanner = new Scanner(System.in);
         double[] number = new double[3];
         System.out.println("Введите 3 числа");
